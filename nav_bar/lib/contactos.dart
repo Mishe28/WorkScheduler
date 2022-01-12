@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart'; // importa del main
-class BuscarPagina extends StatefulWidget {
-  const BuscarPagina({Key? key}) : super(key: key);
+
+class Contactos extends StatefulWidget {
+  const Contactos({Key? key}) : super(key: key);
 
   @override
-  State<BuscarPagina> createState() => _MyStatefulWidgetState();
+  State<Contactos> createState() => _MyStatefulWidgetState();
 }
 
 /// AnimationControllers can be created with `vsync: this` because of TickerProviderStateMixin.
-class _MyStatefulWidgetState extends State<BuscarPagina>
+class _MyStatefulWidgetState extends State<Contactos>
     with TickerProviderStateMixin {
   late TabController _tabController;
 

@@ -1,26 +1,22 @@
 import 'package:flutter/material.dart'; // importa del main
 
-class MenuPagina extends StatelessWidget {
+class Productos extends StatelessWidget {
+  const Productos({Key? key}) : super(key: key);
+
   // para importar en el main hay  q poner lo mswimo
   @override
   Widget build(BuildContext context) {
-    var black = Colors.black;
     return Scaffold(
       backgroundColor: Colors.teal.shade50, // fonde de la otra pagina
       appBar: AppBar(
-        shape: Border(
-          bottom: BorderSide(
-            color: Colors.teal.shade400,
-            width: 3
-            )
-          ),
         foregroundColor: Colors.white,
         backgroundColor: Colors.teal.shade400, //color background del titulo
-        title: Text("Dashboard"),
+        title: const Text("Productos"),
         elevation: 0,
+        
         //centerTitle: true,
       ),
-      //body: Text("Dashboard"),
+      //body: Text("Reportes",style: TextStyle(fontSize: 20),),
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart'; // importa del main
 
-class PaginaFavorita extends StatelessWidget {
+class Settings extends StatelessWidget {
+  const Settings({Key? key}) : super(key: key);
+
   // para importar en el main hay  q poner lo mswimo
   @override
   Widget build(BuildContext context) {
@@ -9,12 +11,12 @@ class PaginaFavorita extends StatelessWidget {
       appBar: AppBar(
         foregroundColor: Colors.white,
         backgroundColor: Colors.teal.shade400, //color background del titulo
-        title: Text("Proyectos"),
+        title: const Text("Configuración"),
         elevation: 0,
         
         //centerTitle: true,
       ),
-      //body: Text("Proyectos"),
+      //body: const Text("Settings"),
     );
   }
 }
