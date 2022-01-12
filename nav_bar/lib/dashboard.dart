@@ -8,14 +8,10 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     //var black = Colors.black;
     return Scaffold(
-      backgroundColor: Colors.teal.shade50, // fonde de la otra pagina
+      backgroundColor: Colors.blueGrey.shade50, // fonde de la otra pagina
       appBar: AppBar(
-        shape: Border(
-          bottom: BorderSide(
-            color: Colors.teal.shade400,
-            width: 3
-            )
-          ),
+        shape:
+            Border(bottom: BorderSide(color: Colors.teal.shade400, width: 3)),
         foregroundColor: Colors.white,
         backgroundColor: Colors.teal.shade400, //color background del titulo
         title: const Text("Dashboard"),

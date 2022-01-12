@@ -46,8 +46,8 @@ class _NavBarState extends State<NavBar> {
 //  Crear  Iconos
 
     return Scaffold(
-      backgroundColor: Colors.teal.shade50, // animacion color
-      
+      backgroundColor: Colors.blueGrey.shade50, // animacion color
+
       body: screens[index],
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
@@ -56,7 +56,7 @@ class _NavBarState extends State<NavBar> {
         child: CurvedNavigationBar(
           key: navigationKey,
           color: Colors.teal.shade400, // color barra navegacion
-          backgroundColor: Colors.teal.shade50,
+          backgroundColor: Colors.blueGrey.shade50,
           height: 50,
           animationCurve: Curves.easeInOut,
           animationDuration: const Duration(milliseconds: 300),

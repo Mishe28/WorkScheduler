@@ -7,13 +7,13 @@ class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal.shade50, // fonde de la otra pagina
+      backgroundColor: Colors.blueGrey.shade50, // fonde de la otra pagina
       appBar: AppBar(
         foregroundColor: Colors.white,
         backgroundColor: Colors.teal.shade400, //color background del titulo
         title: const Text("Configuración"),
         elevation: 0,
-        
+
         //centerTitle: true,
       ),
       //body: const Text("Settings"),
