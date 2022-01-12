@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart'; // importa del main
+import 'package:table_calendar/table_calendar.dart';
 
 class Actividades extends StatelessWidget {
   const Actividades({Key? key}) : super(key: key);
@@ -17,6 +18,10 @@ class Actividades extends StatelessWidget {
         //centerTitle: true,
       ),
       //body: Text("Proyectos"),
+      body: TableCalendar(
+          focusedDay: DateTime.now(),
+          firstDay: DateTime.now(),
+          lastDay: DateTime.now().add(const Duration(days: 300))),
     );
   }
 }
