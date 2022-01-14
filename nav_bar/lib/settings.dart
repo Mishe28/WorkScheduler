@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart'; // importa del main
 
 class Settings extends StatelessWidget {
@@ -117,7 +116,8 @@ class Settings extends StatelessWidget {
                 children: [
                   OutlinedButton(
                     onPressed: () {},
-                    child: const Text("Acti/Desac Notificaciones", // boton de cancel
+                    child: const Text(
+                        "Acti/Desac Notificaciones", // boton de cancel
                         style: TextStyle(fontSize: 14, letterSpacing: 2.2)),
                   ), // boton cancel
                   // boton cerrar sesion
