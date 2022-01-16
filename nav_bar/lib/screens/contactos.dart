@@ -21,9 +21,9 @@ class _MyStatefulWidgetState extends State<Contactos>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey.shade50, // fondo de la otra pagina
+  
       appBar: AppBar(
-        backgroundColor: Colors.teal.shade400, // fondo de la AppBar
+        
         title: const Text('Contactos'),
         actions: <Widget>[
           IconButton(
@@ -93,7 +93,6 @@ class _MyStatefulWidgetState extends State<Contactos>
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.teal.shade400,
         onPressed: () {
           ScaffoldMessenger.of(context)
               .showSnackBar(const SnackBar(content: Text('agregar contactos')));
