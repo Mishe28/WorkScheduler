@@ -85,14 +85,7 @@ class _MyStatefulWidgetState extends State<Contactos>
           ContactoProspecto(),
         ],
       ),
-      /*floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pushNamed(context, 'form_contact');
-        },
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),*/
+
     );
   }
 }

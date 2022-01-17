@@ -11,6 +11,13 @@ export 'package:nav_bar/screens/forms/form_productos.dart';
 export 'package:nav_bar/screens/contact/contacto_empresa.dart';
 export 'package:nav_bar/screens/contact/contacto_prospecto.dart';
 export 'package:nav_bar/screens/contact/contacto_contacto.dart';
+export 'package:nav_bar/screens/inicio/icon_container.dart';
+export 'package:nav_bar/screens/inicio/login.dart';
+export 'package:nav_bar/screens/inicio/registro.dart';
+
+
+
+
 
 
 

@@ -18,7 +18,9 @@ class AppRoutes {
         'contact_contact'     : (BuildContext context) => const ContactoContactos(),
         'contact_leaflet'     : (BuildContext context) => const ContactoProspecto(),
         'contact_bussiness'     : (BuildContext context) => const ContactoEmpresa(),
-
+        'login'     : (BuildContext context) => LoginPage(),
+        'icon_container'     : (BuildContext context) =>  const IconContainer(url: "images/logofinal.png"),
+        'register'     : (BuildContext context) => Register(),
   };
 
 }

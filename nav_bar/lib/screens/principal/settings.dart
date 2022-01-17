@@ -2,11 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:nav_bar/theme/app_theme.dart'; // importa del main
 //import 'package:settings_ui/settings_ui.dart';
 
-class Settings extends StatelessWidget {
+class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
 
   @override
+  State<Settings> createState() => _SettingsState();
+}
+
+class _SettingsState extends State<Settings> {
+  bool isDarkmode =false;
+  @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
       
       appBar: AppBar(
@@ -16,7 +24,7 @@ class Settings extends StatelessWidget {
             icon: const Icon(Icons.logout),
             tooltip: 'Salir',
             onPressed: () {
-              Navigator.pushNamed(context, '');
+              Navigator.pushNamed(context, 'login');
             },
           )
         ],
@@ -135,10 +143,16 @@ class Settings extends StatelessWidget {
                         ListTile(
                           title: Text('Tema oscuro', style: TextStyle(color: AppTheme.blue, fontSize: 18)),
                           //subtitle: Text('Active el tema oscuro para una mejor ', style: TextStyle(color: Colors.grey.shade600, fontSize: 15)),
-                          trailing: Switch(
-                            value: false, 
-                            onChanged: (bool newValue) {},
-                          ),
+                          trailing: Switch.adaptive(
+                            activeColor: AppTheme.primary,
+                            value: isDarkmode, 
+                            onChanged: (value){
+                              isDarkmode = value;
+                              setState(() {
+                                
+                              });
+                            }
+                          )
                         ),   
                       ],
                     ),
