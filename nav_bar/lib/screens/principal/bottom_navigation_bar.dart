@@ -27,9 +27,9 @@ class _NavBarState extends State<NavBar> {
 //  Crear  Iconos
     final items = <Widget>[
       const Icon(Icons.home, size: 30),
-      const Icon(Icons.person, size: 30),
+      const Icon(Icons.contacts, size: 30),
       const Icon(Icons.store, size: 30),
-      const Icon(Icons.calendar_today, size: 30), 
+      const Icon(Icons.event_available, size: 30), 
       const Icon(Icons.settings, size: 30),
     ];
 

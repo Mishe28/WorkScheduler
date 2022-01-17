@@ -4,6 +4,12 @@ import 'package:flutter/material.dart';
 class AppTheme{
   static Color primary = Colors.tealAccent.shade700;
   static Color secondary = Colors.blueGrey.shade50;
+  static Color white = Colors.white;
+  static Color teal400 = Colors.teal.shade400;
+  static Color grey400 = Colors.grey.shade400;
+  static Color grey600 = Colors.grey.shade600;
+  static Color blue = Colors.blue;
+  
   
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
@@ -14,8 +20,11 @@ class AppTheme{
         
         //AppBar Theme
         appBarTheme: AppBarTheme(
+          foregroundColor: white,
           color: primary,
           elevation: 0,
+          shape:
+            Border(bottom: BorderSide(color: teal400, width: 3)),
         ),
         scaffoldBackgroundColor: secondary,
 
@@ -81,9 +90,9 @@ class AppTheme{
 
         //Cards
         cardTheme: CardTheme(
-          color: Colors.grey.shade300,
+          color: Colors.black,
           shadowColor: primary,
-          elevation: 5,
+          elevation: 1,
         )
       );
 }

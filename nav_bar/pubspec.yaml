@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_form_bloc: ^0.20.0
+  settings_ui: ^0.2.0
 
 
   # The following adds the Cupertino Icons font to your application.

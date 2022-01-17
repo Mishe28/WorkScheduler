@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nav_bar/router/app_routes.dart';
 import 'package:nav_bar/theme/app_theme.dart';
-import 'screens/bottom_navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme.lightTheme,
-      home: const NavBar(),
+      routes: AppRoutes.routes,
+      initialRoute: AppRoutes.initialRoute,
     );
   }
 

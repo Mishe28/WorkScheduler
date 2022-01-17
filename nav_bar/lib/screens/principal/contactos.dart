@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart'; // importa del main
+import 'package:flutter/material.dart';
+import 'package:nav_bar/screens/screens.dart';
+
 
 class Contactos extends StatefulWidget {
   const Contactos({Key? key}) : super(key: key);
@@ -23,7 +25,8 @@ class _MyStatefulWidgetState extends State<Contactos>
     return Scaffold(
   
       appBar: AppBar(
-        
+        shape:
+            const Border(bottom: BorderSide.none),
         title: const Text('Contactos'),
         actions: <Widget>[
           IconButton(
@@ -44,7 +47,10 @@ class _MyStatefulWidgetState extends State<Contactos>
           ),
         ],
 
-        bottom: TabBar(
+        bottom: TabBar( 
+          indicatorColor: Colors.teal.shade800,
+          unselectedLabelColor: Colors.white,
+          labelColor: Colors.teal.shade800,
           controller: _tabController,
           tabs: const <Widget>[
             Tab(
@@ -52,18 +58,21 @@ class _MyStatefulWidgetState extends State<Contactos>
                 "Contactos",
                 style: TextStyle(fontSize: 20),
               ),
+              icon: Icon(Icons.person),
             ),
             Tab(
               child: Text(
                 "Empresas",
                 style: TextStyle(fontSize: 20),
               ),
+              icon: Icon(Icons.business),
             ),
             Tab(
               child: Text(
                 "Prospectos",
                 style: TextStyle(fontSize: 20),
               ),
+              icon: Icon(Icons.person_add),
             ),
           ],
         ),
@@ -71,35 +80,19 @@ class _MyStatefulWidgetState extends State<Contactos>
       body: TabBarView(
         controller: _tabController,
         children: const <Widget>[
-          Center(
-            child: Text(
-              "personas individuales",
-              style: TextStyle(fontSize: 20, color: Colors.blueGrey),
-            ),
-          ),
-          Center(
-            child: Text(
-              "empresas ",
-              style: TextStyle(fontSize: 20, color: Colors.blueGrey),
-            ),
-          ),
-          Center(
-            child: Text(
-              "posibles clientes",
-              style: TextStyle(fontSize: 20, color: Colors.blueGrey),
-            ),
-          ),
+          ContactoContactos(),
+          ContactoEmpresa(),
+          ContactoProspecto(),
         ],
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      /*floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          ScaffoldMessenger.of(context)
-              .showSnackBar(const SnackBar(content: Text('agregar contactos')));
+          Navigator.pushNamed(context, 'form_contact');
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ),
+      ),*/
     );
   }
 }

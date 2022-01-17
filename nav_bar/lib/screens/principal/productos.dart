@@ -23,7 +23,6 @@ class _MyStatefulWidgetState extends State<Productos>
     return Scaffold(
       
       appBar: AppBar(
-        
         title: const Text('Productos'),
         actions: <Widget>[
           IconButton(
@@ -62,8 +61,7 @@ class _MyStatefulWidgetState extends State<Productos>
       floatingActionButton: FloatingActionButton(
         
         onPressed: () {
-          ScaffoldMessenger.of(context)
-              .showSnackBar(const SnackBar(content: Text('agregar contactos')));
+          Navigator.pushNamed(context, 'form_product');
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),

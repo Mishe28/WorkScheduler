@@ -10,7 +10,6 @@ class Actividades extends StatelessWidget {
     return Scaffold(
     
       appBar: AppBar(
-        foregroundColor: Colors.white,
         
         title: const Text("Actividades y tareas"),
         elevation: 0,
