@@ -27,7 +27,7 @@ class _MyStatefulWidgetState extends State<Contactos>
       appBar: AppBar(
         shape:
             const Border(bottom: BorderSide.none),
-        title: const Text('Contactos'),
+        title: const Text('Agenda'),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.search),
