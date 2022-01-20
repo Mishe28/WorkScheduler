@@ -2,6 +2,6 @@
  Código fuente del proyecto :´)
  
  Integrantes:
- Carolina Yuqui
- Jhonatan Quito
- Juan Fernando Benítez
+ Carolina Yuqui,
+ Jhonatan Quito,
+ Juan Fernando Benítez,
