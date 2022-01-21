@@ -1,9 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:nav_bar/preferencias/preferences.dart';
+import 'package:nav_bar/provider/theme_provider.dart';
 import 'package:nav_bar/router/app_routes.dart';
 import 'package:nav_bar/theme/app_theme.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Preferences.init();
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeProvider(isDarkmode: Preferences.isDarkmode))
+      ],
+      child: const MyApp(),
+    )
+  );
 }
 
 class MyApp extends StatelessWidget{
@@ -14,7 +29,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: AppTheme.darkTheme,
+      theme: Provider.of<ThemeProvider>(context).currentTheme,
       routes: AppRoutes.routes,
       initialRoute: AppRoutes.initialRoute,
     );

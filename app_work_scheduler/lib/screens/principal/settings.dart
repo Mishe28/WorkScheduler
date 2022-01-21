@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nav_bar/theme/app_theme.dart'; // importa del main
+import 'package:nav_bar/preferencias/preferences.dart';
+import 'package:nav_bar/provider/theme_provider.dart';
+import 'package:nav_bar/theme/app_theme.dart';
+import 'package:provider/provider.dart'; // importa del main
 //import 'package:settings_ui/settings_ui.dart';
 
 class Settings extends StatefulWidget {
@@ -10,7 +13,7 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
-  bool isDarkmode =false;
+  
   @override
   Widget build(BuildContext context) {
 
@@ -145,9 +148,14 @@ class _SettingsState extends State<Settings> {
                           //subtitle: Text('Active el tema oscuro para una mejor ', style: TextStyle(color: Colors.grey.shade600, fontSize: 15)),
                           trailing: Switch.adaptive(
                             activeColor: AppTheme.primary,
-                            value: isDarkmode, 
+                            value: Preferences.isDarkmode, 
                             onChanged: (value){
-                              isDarkmode = value;
+                              Preferences.isDarkmode = value;
+                              final themeProvider = Provider.of<ThemeProvider>(context, listen: false);
+
+                              value 
+                                ? themeProvider.setDarkMode() 
+                                : themeProvider.setLightMode();
                               setState(() {
                                 
                               });

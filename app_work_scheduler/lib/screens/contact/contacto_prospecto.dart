@@ -21,15 +21,10 @@ class _MyHomePageState extends State<ContactoProspecto> {
         padding:const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: const [
           CardProspectos(),
-          SizedBox(height: 20),
           CardProspectos(),
-          SizedBox(height: 20),
           CardProspectos(),
-          SizedBox(height: 20),
           CardProspectos(),
-          SizedBox(height: 20),
           CardProspectos(),
-          SizedBox(height: 20),
           
          
         ],

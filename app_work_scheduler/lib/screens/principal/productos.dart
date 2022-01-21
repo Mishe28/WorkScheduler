@@ -63,19 +63,11 @@ class _MyStatefulWidgetState extends State<Productos>
         padding:const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: const [
           CardProductos(),
-          Divider(),
           CardProductos(),
-          SizedBox(height: 20),
           CardProductos(),
-          SizedBox(height: 20),
           CardProductos(),
-          SizedBox(height: 20),
           CardProductos(),
-          SizedBox(height: 20),
           CardProductos(),
-          SizedBox(height: 20),
-          
-         
         ],
       ),
 
