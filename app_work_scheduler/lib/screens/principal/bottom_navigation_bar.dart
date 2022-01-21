@@ -17,9 +17,11 @@ class _NavBarState extends State<NavBar> {
   final screens = [
     const Dashboard(),
     const Contactos(), //Estos son los Iconos para importar tiene que estar en verde
+    const Ofertas(),
     const Productos(),
     const Actividades(),
     const Settings(),
+
   ];
 
   @override
@@ -28,6 +30,7 @@ class _NavBarState extends State<NavBar> {
     final items = <Widget>[
       const Icon(Icons.home, size: 30),
       const Icon(Icons.contacts, size: 30),
+      const Icon(Icons.local_offer, size: 30),
       const Icon(Icons.store, size: 30),
       const Icon(Icons.event_available, size: 30), 
       const Icon(Icons.settings, size: 30),

@@ -8,13 +8,6 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     //var black = Colors.black;
     return Scaffold(
-      //backgroundColor: Colors.blueGrey.shade50, // fonde de la otra pagina
-      appBar: AppBar(
-        title: const Text("Dashboard"),
-        elevation: 0,
-        //centerTitle: true,
-      ),
-      //body: Text("Dashboard"),
     );
   }
 }

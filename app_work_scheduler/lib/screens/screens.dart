@@ -1,6 +1,7 @@
 export 'package:nav_bar/screens/principal/actividades.dart';
 export 'package:nav_bar/screens/principal/contactos.dart';
 export 'package:nav_bar/screens/principal/dashboard.dart';
+export 'package:nav_bar/screens/principal/ofertas.dart';
 export 'package:nav_bar/screens/principal/productos.dart';
 export 'package:nav_bar/screens/principal/settings.dart';
 export 'package:nav_bar/screens/principal/bottom_navigation_bar.dart';
