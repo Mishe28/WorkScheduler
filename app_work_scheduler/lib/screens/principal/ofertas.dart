@@ -1,20 +1,86 @@
-import 'package:flutter/material.dart'; // importa del main
+import 'package:flutter/material.dart';
+import 'package:nav_bar/screens/screens.dart';
+import 'package:nav_bar/theme/app_theme.dart';
 
-class Ofertas extends StatelessWidget {
+
+class Ofertas extends StatefulWidget {
   const Ofertas({Key? key}) : super(key: key);
 
-  // para importar en el main hay  q poner lo mswimo
+  @override
+  State<Ofertas> createState() => _MyStatefulWidgetState();
+}
+
+/// AnimationControllers can be created with `vsync: this` because of TickerProviderStateMixin.
+class _MyStatefulWidgetState extends State<Ofertas>
+    with TickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 5, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
-    //var black = Colors.black;
     return Scaffold(
-      //backgroundColor: Colors.blueGrey.shade50, // fonde de la otra pagina
+  
       appBar: AppBar(
-        title: const Text("Ofertas"),
-        elevation: 0,
-        //centerTitle: true,
+        backgroundColor: Colors.transparent,
+        shape:
+            const Border(bottom: BorderSide.none),
+        title: const Text('Ofertas'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.search),
+            tooltip: 'buscar',
+            onPressed: () {
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(const SnackBar(content: Text('buscar')));
+            },
+          ),
+        ],
+
+         
+        bottom: TabBar( 
+          indicator: BoxDecoration(
+            borderRadius: BorderRadius.circular(50),
+            color: AppTheme.primary
+          ),
+          //indicatorColor: Colors.teal.shade800,
+          //unselectedLabelColor: Colors.white,
+          labelColor: Colors.white,
+          controller: _tabController,
+          tabs: const <Widget>[
+            Tab(
+              icon: Icon(Icons.analytics),
+            ),
+            Tab(
+              icon: Icon(Icons.request_quote),
+            ),
+            Tab(
+              icon: Icon(Icons.grading),
+            ),
+            Tab(
+              icon: Icon(Icons.emoji_events),
+            ),
+            Tab(
+              icon: Icon(Icons.reduce_capacity),
+            ),
+          ],
+        ),
       ),
-      //body: Text("Dashboard"),
+      body: TabBarView(
+        controller: _tabController,
+        children: const <Widget>[
+          Analisis(),
+          Cotizacion(),
+          Revision(),
+          Ganado(),
+          Perdido(),
+        ],
+      ),
+
     );
   }
 }

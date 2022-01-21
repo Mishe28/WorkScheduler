@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:nav_bar/screens/screens.dart';
+import 'package:nav_bar/theme/app_theme.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -44,10 +45,12 @@ class _NavBarState extends State<NavBar> {
         ),
         child: CurvedNavigationBar(
           key: navigationKey,
-          color: Colors.tealAccent.shade700, // color barra navegacion
+          color: AppTheme.primary, // color barra navegacion
           backgroundColor: Colors.transparent,
+          //buttonBackgroundColor: AppTheme.primary,
           height: 50,
-          animationCurve: Curves.easeInOut,
+          //animationCurve: Curves.easeInOut,
+          
           animationDuration: const Duration(milliseconds: 300),
           index: index,
           items: items,

@@ -185,7 +185,7 @@ class _SettingsState extends State<Settings> {
                           subtitle: Text('Explore las formas de aumentar la seguridad y privacidad de su cuenta', style: TextStyle(color: Colors.grey.shade600, fontSize: 15)),
                           trailing: IconButton(
                             onPressed: (){
-                              Navigator.pushNamed(context, '');
+                              Navigator.pushNamed(context, 'privacidad_seguridad');
                             }, 
                             icon:const Icon(Icons.arrow_forward_ios)
                           )
@@ -220,7 +220,7 @@ class _SettingsState extends State<Settings> {
                           title: Text('Enviar comentarios', style: TextStyle(color: AppTheme.blue, fontSize: 18)),
                           trailing: IconButton(
                             onPressed: (){
-                              Navigator.pushNamed(context, '');
+                              Navigator.pushNamed(context, 'comentarios');
                             }, 
                             icon:const Icon(Icons.arrow_forward_ios)
                           )
@@ -232,7 +232,7 @@ class _SettingsState extends State<Settings> {
                           title: Text('Guía de ayuda', style: TextStyle(color: AppTheme.blue, fontSize: 18)),
                           trailing: IconButton(
                             onPressed: (){
-                              Navigator.pushNamed(context, '');
+                              Navigator.pushNamed(context, 'guia_ayuda');
                             }, 
                             icon:const Icon(Icons.arrow_forward_ios)
                           )
@@ -244,7 +244,7 @@ class _SettingsState extends State<Settings> {
                           title: Text('Comunidad', style: TextStyle(color: AppTheme.blue, fontSize: 18)),
                           trailing: IconButton(
                             onPressed: (){
-                              Navigator.pushNamed(context, '');
+                              Navigator.pushNamed(context, 'comunidad');
                             }, 
                             icon:const Icon(Icons.arrow_forward_ios)
                           )
@@ -280,7 +280,7 @@ class _SettingsState extends State<Settings> {
                           title: Text('Terminos y condiciones', style: TextStyle(color: AppTheme.blue, fontSize: 18)),
                           trailing: IconButton(
                             onPressed: (){
-                              Navigator.pushNamed(context, '');
+                              Navigator.pushNamed(context, 'terminos_condiciones');
                             }, 
                             icon:const Icon(Icons.arrow_forward_ios)
                           )
@@ -292,7 +292,7 @@ class _SettingsState extends State<Settings> {
                           title: Text('Política de privacidad', style: TextStyle(color: AppTheme.blue, fontSize: 18)),
                           trailing: IconButton(
                             onPressed: (){
-                              Navigator.pushNamed(context, '');
+                              Navigator.pushNamed(context, 'politica_privacidad');
                             }, 
                             icon:const Icon(Icons.arrow_forward_ios)
                           )

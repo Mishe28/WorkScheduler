@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nav_bar/widgets/widgets.dart';
+
 
 class ContactoContactos extends StatefulWidget {
   const ContactoContactos({Key? key}) : super(key: key);
@@ -15,10 +17,19 @@ class _MyHomePageState extends State<ContactoContactos> {
     
     return Scaffold(
 
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-        ),
+      body: ListView(
+        padding:const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        children: const [
+          CardContactos(),
+          SizedBox(height: 20),
+          CardContactos(),
+          SizedBox(height: 20),
+          CardContactos(),
+          SizedBox(height: 20),
+          CardContactos(),
+          SizedBox(height: 20),
+         
+        ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(

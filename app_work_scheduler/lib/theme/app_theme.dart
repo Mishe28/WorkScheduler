@@ -9,6 +9,7 @@ class AppTheme{
   static Color grey400 = Colors.grey.shade400;
   static Color grey600 = Colors.grey.shade600;
   static Color blue = Colors.blue;
+  static Color black = Colors.black;
   
   
 
@@ -20,11 +21,11 @@ class AppTheme{
         
         //AppBar Theme
         appBarTheme: AppBarTheme(
-          foregroundColor: white,
-          color: primary,
+          foregroundColor: Colors.black,
+          color: Colors.transparent,
           elevation: 0,
           shape:
-            Border(bottom: BorderSide(color: teal400, width: 3)),
+            Border(bottom: BorderSide(color: grey400, width: 2)),
         ),
         scaffoldBackgroundColor: secondary,
 
@@ -32,10 +33,24 @@ class AppTheme{
           style: TextButton.styleFrom(primary: primary)
         ),
 
+        //Tab Bar
+        tabBarTheme: TabBarTheme(
+          unselectedLabelColor: Colors.black,
+          labelStyle: TextStyle(
+            fontSize: 10,
+            color: black,
+            fontWeight: FontWeight.bold
+          ),
+          unselectedLabelStyle: TextStyle(
+            fontSize: 10,
+            color: black
+          )
+        ),
+
         //floatingActionButtons
         floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: primary,
-          foregroundColor: Colors.white,
+          backgroundColor: blue,
+          foregroundColor: white,
           //elevation: 5
         ),
 
@@ -50,22 +65,41 @@ class AppTheme{
 
         //Cards
         cardTheme: CardTheme(
-          color: Colors.white,
+          color: white,
           shadowColor: primary,
           elevation: 1,
-        )
+        ),
+
+
       );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
         //color primario
-        primaryColor: Colors.white,
+        primaryColor: white,
         //AppBar Theme
         appBarTheme: AppBarTheme(
-          color: primary,
+          foregroundColor: white,
+          color: Colors.transparent,
           elevation: 0,
+          shape:
+            Border(bottom: BorderSide(color: grey400, width: 1)),
         ),
 
-        scaffoldBackgroundColor: Colors.black,
+         //Tab Bar
+        tabBarTheme: TabBarTheme(
+          unselectedLabelColor: white,
+          labelStyle: TextStyle(
+            fontSize: 10,
+            color: white,
+            fontWeight: FontWeight.bold
+          ),
+          unselectedLabelStyle: TextStyle(
+            fontSize: 10,
+            color: white
+          )
+        ),
+
+        scaffoldBackgroundColor: black,
 
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(primary: primary)
@@ -73,8 +107,8 @@ class AppTheme{
 
         //floatingActionButtons
         floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: primary,
-          foregroundColor: Colors.white,
+          backgroundColor: blue,
+          foregroundColor: white,
           //elevation: 5
         ),
 
@@ -90,9 +124,11 @@ class AppTheme{
 
         //Cards
         cardTheme: CardTheme(
-          color: Colors.black,
+          color: black,
           shadowColor: primary,
           elevation: 1,
-        )
+        ),
+
+      
       );
 }

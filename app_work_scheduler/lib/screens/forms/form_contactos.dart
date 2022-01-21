@@ -31,7 +31,7 @@ class _MyHomePageState extends State<Form_Contacto> {
           title: const Text('Agregar Contacto',),
           actions: <Widget>[
             IconButton(
-              icon: const Icon(Icons.done),
+              icon: const Icon(Icons.done, color: Colors.green,),
               tooltip: 'Guardado',
               onPressed: () {
                 //Poner validación de los campos y de acuerdo a eso ver si se manda o no

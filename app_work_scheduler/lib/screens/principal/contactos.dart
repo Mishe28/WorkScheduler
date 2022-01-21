@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nav_bar/screens/screens.dart';
+import 'package:nav_bar/theme/app_theme.dart';
 
 
 class Contactos extends StatefulWidget {
@@ -25,6 +26,7 @@ class _MyStatefulWidgetState extends State<Contactos>
     return Scaffold(
   
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         shape:
             const Border(bottom: BorderSide.none),
         title: const Text('Agenda'),
@@ -37,20 +39,17 @@ class _MyStatefulWidgetState extends State<Contactos>
                   .showSnackBar(const SnackBar(content: Text('buscar')));
             },
           ),
-          IconButton(
-            icon: const Icon(Icons.filter_list),
-            tooltip: 'filtrar',
-            onPressed: () {
-              ScaffoldMessenger.of(context)
-                  .showSnackBar(const SnackBar(content: Text('Filtrar')));
-            },
-          ),
         ],
 
+         
         bottom: TabBar( 
-          indicatorColor: Colors.teal.shade800,
-          unselectedLabelColor: Colors.white,
-          labelColor: Colors.teal.shade800,
+          indicator: BoxDecoration(
+            borderRadius: BorderRadius.circular(50),
+            color: AppTheme.primary
+          ),
+          //indicatorColor: Colors.teal.shade800,
+          //unselectedLabelColor: Colors.white,
+          labelColor: Colors.white,
           controller: _tabController,
           tabs: const <Widget>[
             Tab(
@@ -58,21 +57,21 @@ class _MyStatefulWidgetState extends State<Contactos>
                 "Contactos",
                 style: TextStyle(fontSize: 20),
               ),
-              icon: Icon(Icons.person),
+              //icon: Icon(Icons.person),
             ),
             Tab(
               child: Text(
                 "Empresas",
                 style: TextStyle(fontSize: 20),
               ),
-              icon: Icon(Icons.business),
+              //icon: Icon(Icons.business),
             ),
             Tab(
               child: Text(
                 "Prospectos",
                 style: TextStyle(fontSize: 20),
               ),
-              icon: Icon(Icons.person_add),
+              //icon: Icon(Icons.person_add),
             ),
           ],
         ),
